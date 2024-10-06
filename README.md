@@ -16,7 +16,7 @@ The `TennisGame` project simulates a tennis game, tracking the scores of two pla
 ## Setup
 1. Clone the repository:
     ```sh
-    git clone https://github.com/radhouenchbinou/TennisGame.git
+    git clone https://github.com/radhouenchbinou/kata-tennis-game.git
     ```
 2. Navigate to the project directory:
     ```sh

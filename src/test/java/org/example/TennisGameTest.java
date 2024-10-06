@@ -74,7 +74,6 @@ public class TennisGameTest {
      */
     @Test
     public void testComputeScore() {
-
         testCases.forEach((gameSequence, expectedOutput) -> {
             tennisGame.computeScore(gameSequence);
             assertEquals(expectedOutput, outContent.toString());
