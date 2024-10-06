@@ -19,9 +19,11 @@ public class TennisGameTest {
     private final String lineSeparator = System.lineSeparator();
     private ByteArrayOutputStream outContent;
 
-    /* The testCases map contains different game sequences as keys and the expected output as values.
-     The expected output is the score of the game after each point in the game sequence.
-     The test cases cover different scenarios, such as a game with multiple deuces and a game with a player winning.*/
+    /**
+     *  The testCases map contains different game sequences as keys and the expected output as values.
+     *  The expected output is the score of the game after each point in the game sequence.
+     *  The test cases cover different scenarios, such as a game with multiple deuces and a game with a player winning.
+     */
     private final Map<String, String> testCases = Map.of(
             "ABABABBAABBB", "Player A: 15 - Player B: 0" + lineSeparator +
                     "Player A: 15 - Player B: 15" + lineSeparator +
