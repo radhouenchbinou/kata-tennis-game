@@ -10,18 +10,8 @@ import java.util.Map;
  */
 public class TennisGame {
     private final int[] tennisScores = {0, 15, 30, 40};
-    private Map<Character, Integer> playersScores = new HashMap<>(Map.of('A', 0, 'B', 0));
+    private final Map<Character, Integer> playersScores = new HashMap<>(Map.of('A', 0, 'B', 0));
     private char gameAdvantage = 'D';
-
-    /**
-     * Commits the score for a given player.
-     *
-     * @param player the player ('A' or 'B')
-     * @param score  the score to commit
-     */
-    public void commitPlayerScores(char player, int score) {
-        playersScores.put(player, score);
-    }
 
     /**
      * Computes the score based on the given game sequence.
@@ -53,7 +43,7 @@ public class TennisGame {
      * @param player the player ('A' or 'B')
      */
     private void updatePlayerScore(char player) {
-        Integer pScore = playersScores.get(player) + 1;
+        int pScore = playersScores.get(player) + 1;
         if (isDeuce()) {
             handleDeuce(player, pScore);
         } else {
