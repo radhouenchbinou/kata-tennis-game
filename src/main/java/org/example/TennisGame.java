@@ -9,7 +9,7 @@ import java.util.Map;
  * and print the current score.
  */
 public class TennisGame {
-    private final int[] tennisScores = {0, 15, 30, 40};
+    private final int[] TENNIS_SCORE = {0, 15, 30, 40};
     private final Map<Character, Integer> playersScores = new HashMap<>(Map.of('A', 0, 'B', 0));
     private char gameAdvantage = 'D';
 
@@ -57,7 +57,7 @@ public class TennisGame {
      * @return true if the score is deuce, false otherwise
      */
     private boolean isDeuce() {
-        return tennisScores[playersScores.get('A')] == 40 && tennisScores[playersScores.get('B')] == 40;
+        return TENNIS_SCORE[playersScores.get('A')] == 40 && TENNIS_SCORE[playersScores.get('B')] == 40;
     }
 
     /**
@@ -96,7 +96,7 @@ public class TennisGame {
      * Prints the current score of the game.
      */
     private void printCurrentScore() {
-        System.out.println("Player A: " + tennisScores[playersScores.get('A')] + " - Player B: " + tennisScores[playersScores.get('B')]);
+        System.out.println("Player A: " + TENNIS_SCORE[playersScores.get('A')] + " - Player B: " + TENNIS_SCORE[playersScores.get('B')]);
         if (isDeuce()) {
             if (gameAdvantage == 'D') {
                 System.out.println("Deuce");
